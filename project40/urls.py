@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
+from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Cbv_html/',TemplateView.as_view(template_name='Cbv_html.html'),name='Cbv_html'),
+    path('cbv_context/',cbv_context.as_view(),name='cbv_context'),
 ]
